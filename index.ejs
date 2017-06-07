@@ -1,0 +1,20 @@
+<% include partials/header%>
+	<h1>Login</h1>
+	<% if(errors != undefined){ %>
+	<ul>
+	<%errors.forEach(function(error){%>
+		<li><%=error.msg%></li>
+	<% }) %>
+	</ul>
+	<% } %>
+	<form method ="post" action="/users/add">
+		<label>firstname</label>
+		<input type="text" name = "firstname"><br>
+		<label>lastname</label>
+		<input type="text" name = "lastname"><br>
+		<label>email</label>
+		<input type="email" name = "email"><br>
+		<input type = "submit" name="submit" value ="submit">		
+	</form>
+
+<% include partials/footer%>
